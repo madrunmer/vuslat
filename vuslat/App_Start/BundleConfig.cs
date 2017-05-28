@@ -23,9 +23,18 @@ namespace vuslat
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/admin").Include(
+                      "~/Content/js/app.js",
+                      "~/Content/js/pages/dashboard.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Admin/css").Include(
+                      "~/Content/bootstrap.css",
+                      "~/Content/css/AdminLTE.css",
+                      "~/Content/css/skins/skin-blue.css"));
         }
     }
 }

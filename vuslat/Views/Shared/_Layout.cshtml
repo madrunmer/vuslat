@@ -3,39 +3,110 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Uluslararası Vuslat Derneği</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <script src="https://use.fontawesome.com/032ddc6798.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,700&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="top-bar">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+            <div class="pull-right">
+                <a href="https://www.facebook.com/UluslararasiVuslatPlatformu/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/UlusVuslat" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+    <div class="container">
+        <div class="logo-container">
+            <div class="pull-left">
+                <a href="/">
+                    <img src="http://www.vuslatplatformu.com/templates/cepon/images/logo.png" class="logo" />
+                </a>
+            </div>
+            <div class="pull-right"></div>
+        </div>
+        <div class="menu shadow-1dp">
+            <nav class="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="/">Anasayfa</a>
+                    </li>
+                    <li>
+                        <a href="/">Haberler</a>
+                    </li>
+                    <li>
+                        <a href="/">Video Yayınlarımız</a>
+                    </li>
+                    <li>
+                        <a href="/">İrtibat</a>
+                    </li>
+                    <li>
+                        <a href="/">Hakkımızda</a>
+                    </li>
+                </ul>
+                <form action="#" method="get" class="pull-right menu-search">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control" placeholder="Ara...">
+                        <span class="input-group-btn">
+                            <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </nav>
+        </div>
+        <div class="contents">
+            @RenderBody()
+
+        </div>
+        
     </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <h3>Misyonumuz</h3>
+                    <p>
+                        Medeniyetimizin yeniden inşası yolunda ilim, ahlak ve irfanı merkeze alarak
+                        - Sivil ve kamusal hizmetler yürüten kurumları desteklemek ve yönlendirmek,
+                        - Entelektüel birikimin ve tecrübenin yapılan analizlerle politika yapıcıların kullanımına sunmak,
+                        - Toplumumuzun tüm farklılıklarını kuşatacak çalışmalar yürütmek,
+                        - Bu değerler doğrultusunda medeniyet tasavvuruna sahip nesillerin yetişmesine katkıda bulunmaktır.
+                    </p>
+                </div>
+                <div class="col-xs-4">
+                    <h3>Vizyon</h3>
+                    <p>Vuslat Platformu, başta ülkemiz ve Avrupa ülkeleri olmak üzere dünyanın farklı coğrafyalarında aynı gaye ve manevi değerler etrafında fikir ve gönül birliği olan insanların, ortak tecrübe ve entelektüel birikimini bir araya getirerek, istifade ve istişare temelinde, Türkiye’nin yüzyıllardır üstlendiği medeniyet misyonunun yeniden idraklerde inşa edilmesine yardım eden bir sivil toplum hareketidir. </p>
+                </div>
+                <div class="col-xs-4">
+                    <h3>İrtibat</h3>
+                    <p>
+                        Hamza CEBECİ 05323216524 <br />
+                        hamzacebeci@hotmail.com <br />
+                        Erdoğan KARADENİZ 0049 163 5962764 <br />
+                        erdogankaradeniz@hotmail.com <br />
+                        Muhammed Sarı 05303705316 <br />
+                        muhammedsari53@googlemail.com <br />
+                        Mehmet Ayhan Ömeroğlu 05377163448 <br />
+                        m-ayhanoemeroglu@hotmail.de <br />
+                        Ahmet MALATYALI 05413807076 <br />
+                        ahmetmalatyali@hotmail.com <br />
+                        E-Mail : info@vuslatplatformu.com <br />
+                        www.vuslatplatformu.com <br />
+                    </p>
+                </div>
+            </div>
+            <a href="http://www.sungurbilisim.com" target="_blank">&copy; @DateTime.Now.Year - Sungur Bilişim Teknolojileri Ltd. Şti.</a>
+
+        </div>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

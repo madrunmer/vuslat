@@ -1,24 +1,254 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    background: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizeLegibility !important;
+    color:#333333;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1050px;
+    }
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+@media screen and (min-width: 768px) {
+    .carousel-caption {
+        right: 10%;
+        left: 10%;
+        background: rgba(0,0,0,0.3);
+    }
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.shadow-1dp {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
+
+.bg-white {
+    background: white;
+}
+
+.margin-bottom {
+    margin-bottom: 15px;
+}
+
+.top-bar {
+    font-size: 20px;
+    background: #f8f8f8;
+    padding: 4px 0;
+}
+
+    .top-bar i {
+        color: #777;
+    }
+
+    .top-bar a {
+        background: #eee;
+        padding: 8px;
+        line-height: 2;
+        margin-right: 4px;
+        border-radius: 2px;
+    }
+
+.logo-container {
+    display: inline-block;
+    padding: 24px 0;
+}
+
+.menu {
+    background: white;
+}
+
+    .menu a {
+        color: #00A89D;
+        transition: all 0.4s ease;
+    }
+
+.navbar {
+    border: none;
+}
+
+.nav > li > a {
+    font-size: 16px;
+    padding: 15px 25px;
+}
+
+    .nav > li > a:hover, .nav > li > a:focus {
+        background: #00A89D;
+        color: white;
+    }
+
+.menu .active a {
+    background: #00A89D;
+    color: white;
+}
+
+.menu-search {
+    width: 200px;
+    margin-top: 8px;
+    margin-right: 15px;
+}
+
+    .menu-search button {
+        background: #00A89D;
+        color: white;
+    }
+
+div#myCarousel {
+    margin: 0 -15px;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    height: 460px;
+    margin: auto;
+}
+
+.haberler {
+    margin-left: -15px;
+    padding: 10px 15px;
+}
+
+img.haber-resim {
+    margin-right: 15px;
+    height: 60px;
+    float: left;
+}
+
+.haber {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+    .haber > .haber-icerik {
+        color: #333333;
+        text-decoration: none;
+        max-height: 55px;
+        overflow: hidden;
+    }
+
+h1.big-header {
+    padding: 15px;
+    color: #555;
+    font-weight: bold;
+    text-align: center;
+}
+
+img.card-image {
+    max-width: calc(100% + 30px);
+    margin: 15px -15px;
+}
+
+.cards {
+    margin: 0 -15px;
+    width: calc(100% + 30px);
+}
+
+    .cards .col-xs-4 {
+        height: 440px;
+    }
+
+.card {
+    padding: 15px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    max-height: 440px;
+    overflow: hidden;
+    color:#555555;
+}
+.card-info{
+    color:#999999;
+}
+    .card:hover {
+        background: #f8f8f8;
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    .card .card-header h3 {
+        margin-top: 10px;
+    }
+
+
+div#videoCarousel {
+    margin: 15px;
+}
+
+img.video-image {
+    height: 80px;
+    margin-right: 15px;
+    border-radius: 2px;
+}
+
+
+.video-element {
+    margin: 15px;
+    display: flex;
+    color: #555;
+    cursor: pointer;
+    padding: 15px 0;
+}
+
+#videoCarousel img {
+    height: auto;
+}
+
+footer {
+    background-color: #00A89D;
+    color: #f1f1f1;
+}
+
+    footer a {
+        color: #f2f2f2;
+    }
+
+.yazi {
+    display: flex;
+    cursor: pointer;
+    color: #777777;
+    transition: all 0.4s ease;
+}
+
+.yazi-icerik {
+    padding: 15px;
+}
+
+    .yazi-icerik h4 {
+        color: #333333;
+    }
+
+.yazi:hover {
+    background: #f8f8f8;
+}
+
+.yazi .yazi-info {
+    color: #999999;
+}
+
+.kose-yazarlari.bg-white.shadow-1dp {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.yazar {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:30px;
+}
+
+    .yazar img {
+        width: 60%;
+        border-radius: 50%;
+        margin: 7.5px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    }
